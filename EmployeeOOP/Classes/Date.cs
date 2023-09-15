@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeOOP.Classes
+﻿namespace EmployeeOOP.Classes
 {
     public class Date
     {
@@ -28,20 +22,20 @@ namespace EmployeeOOP.Classes
         private int ValidateDay(int day, int month, int year) //Se está creando desde cero para aprender más pero se puede declarar la variable dateTime
         {
             //Valido si el dia ingresado pertenece a un año bisiesto
-            if (month == 2 && day == 29 && IsLeapYear(year)) 
+            if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 return day;
             }
 
-            if (month == 2 && day == 29 && IsLeapYear(year)) 
+            if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 bool isLeapYear = false;
                 IsLeapYearException(isLeapYear, year);
             }
 
-            int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+            int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-            if (day >= 1 && day <= daysPerMonth[month]) 
+            if (day >= 1 && day <= daysPerMonth[month])
             {
                 return day;
             }
@@ -67,7 +61,7 @@ namespace EmployeeOOP.Classes
 
         private int ValidateYear(int year)
         {
-            if (year >= 1900) 
+            if (year >= 1900)
             {
                 return year;
             }
@@ -80,7 +74,7 @@ namespace EmployeeOOP.Classes
 
         private int ValidateMonth(int month)
         {
-            if (month >= 1 && month <= 12) 
+            if (month >= 1 && month <= 12)
             {
                 return month;
             }
