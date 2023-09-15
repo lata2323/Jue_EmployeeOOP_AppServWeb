@@ -1,4 +1,6 @@
-﻿namespace EmployeeOOP.Classes
+﻿using EmployeeOOP.Exceptions;
+
+namespace EmployeeOOP.Classes
 {
     public class Date
     {
