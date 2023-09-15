@@ -1,24 +1,24 @@
 ﻿namespace EmployeeOOP.Classes
 {
-    public class CommissionEmployee : Employee
+    public class HourlyEmployee : Employee
     {
         #region Properties
 
-        public decimal CommissionPercentaje { get; set; }
-        public decimal Sales { get; set; }
+        public int Hours { get; set; }
+        public decimal HourValue { get; set; }
 
         #endregion
 
         #region Methods
 
-        public CommissionEmployee()
+        public HourlyEmployee()
         {
-
+            
         }
 
         public override decimal GetValueToPay()
         {
-            return CommissionPercentaje / 100 * Sales;
+            return HourValue*Hours;
         }
 
         public override string ToString()
